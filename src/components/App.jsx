@@ -8,6 +8,12 @@ function App() {
 
   function handleChange(event) {
     const newValue = event.target.value;
+    const inputName = event.target.name;
+
+    
+    setFullName(prevValue => {
+    console.log(prevValue)
+  )}); 
   }
 
   return (
