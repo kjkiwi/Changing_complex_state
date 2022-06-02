@@ -10,10 +10,9 @@ function App() {
     const newValue = event.target.value;
     const inputName = event.target.name;
 
-    
-    setFullName(prevValue => {
-    console.log(prevValue)
-  )}); 
+    setFullName((prevValue) => {
+      console.log(prevValue);
+    });
   }
 
   return (
