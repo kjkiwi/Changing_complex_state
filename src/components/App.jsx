@@ -11,7 +11,17 @@ function App() {
     const inputName = event.target.name;
 
     setFullName((prevValue) => {
-      console.log(prevValue);
+      if (inputName === "fName") {
+        return {
+          fName: newValue,
+          lName: prevValue.lName
+        };
+      } else if (inputName === "lName") {
+        return {
+          fName: prevValue.fName,
+          lName: newValue
+        };
+      }
     });
   }
 
@@ -25,13 +35,13 @@ function App() {
           onChange={handleChange}
           name="fName"
           placeholder="First Name"
-          // value={fullName.fName}
+          value={fullName.fName}
         />
         <input
           onChange={handleChange}
           name="lName"
           placeholder="Last Name"
-          // value={fullName.lName}
+          value={fullName.lName}
         />
         <button>Submit</button>
       </form>
